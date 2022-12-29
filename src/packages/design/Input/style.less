@@ -1,0 +1,94 @@
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  &-suffix {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      opacity: 0.8;
+    }
+    &-middle {
+      font-size: 16px;
+      width: 18px;
+      height: 18px;
+
+      top: 10px;
+      right: 12px;
+    }
+    &-large {
+      font-size: 18px;
+      width: 20px;
+      height: 20px;
+
+      top: 12px;
+      right: 12px;
+    }
+    &-small {
+      font-size: 14px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      right: 12px;
+    }
+  }
+  &:hover {
+    .input-wrapper-suffix {
+      display: flex;
+    }
+  }
+  .input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--d-border);
+    padding: 0 12px;
+    box-sizing: border-box;
+    color: var(--d-text);
+    border-radius: 3px;
+    box-sizing: border-box;
+    appearance: none;
+    outline: none;
+    transition: all ease-in 0.1s;
+    position: relative;
+    &::placeholder {
+      color: var(--d-desc);
+    }
+    &:focus {
+      border-color: var(--d-border);
+      box-shadow: 0 0 0 2px var(--d-bgc-hover);
+    }
+    &:hover {
+      border-color: var(--d-border);
+    }
+    &::selection {
+      background-color: var(--d-bgc-selection);
+    }
+    &-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    &-middle {
+      height: 38px;
+      font-size: 14px;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    &-large {
+      height: 45px;
+      font-size: 16px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    &-small {
+      height: 28px;
+      font-size: 12px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+}

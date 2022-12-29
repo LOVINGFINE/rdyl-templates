@@ -1,0 +1,44 @@
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  transition: opacity 0.1s;
+  animation: show-tooltip 0.2s;
+  &-inner {
+    position: relative;
+    &-arrow {
+      position: absolute;
+      background-color: transparent;
+      overflow: hidden;
+      & > span {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 1px;
+        background-color: rgba(0, 0, 0, 0.826);
+      }
+    }
+    &-content {
+      background-color: rgba(0, 0, 0, 0.826);
+      color: #fff;
+      padding: 4px 12px;
+      max-width: 220px;
+      line-height: 20px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes show-tooltip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
