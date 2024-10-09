@@ -1,11 +1,10 @@
 {
-  "name": "rdyl",
-  "version": "1.0.4",
+  "name": "rdyl-cli",
+  "version": "1.0.5",
   "description": "rdyl 脚手架工具",
-  "type": "module",
   "main": "index.js",
   "bin": {
-    "rdyl": "./index.js"
+    "rdyl": "index.js"
   },
   "keywords": [
     "template",
@@ -20,6 +19,7 @@
     "inquirer": "^9.1.4",
     "log-symbols": "^5.1.0",
     "ora": "^6.1.2",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "typescript": "^5.6.3"
   }
 }
