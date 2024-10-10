@@ -1,25 +1,29 @@
 {
   "name": "rdyl-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "rdyl 脚手架工具",
-  "main": "index.js",
+  "license": "ISC",
+  "type": "module",
   "bin": {
-    "rdyl": "index.js"
+    "rdyl": "./index.js"
   },
   "keywords": [
     "template",
     "cli"
   ],
-  "license": "ISC",
+  "scripts": {
+    "pub:beta": "npm publish --tag=beta",
+    "pub": "npm publish"
+  },
   "dependencies": {
     "chalk": "^5.2.0",
     "commander": "^9.4.1",
-    "download-git-repo": "^3.0.2",
+    "download-git-repo": "^0.0.2",
     "fs-extra": "^11.1.0",
+    "git-clone": "^0.2.0",
     "inquirer": "^9.1.4",
     "log-symbols": "^5.1.0",
     "ora": "^6.1.2",
-    "shelljs": "^0.8.5",
-    "typescript": "^5.6.3"
+    "shelljs": "^0.8.5"
   }
 }
