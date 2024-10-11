@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-import pkg from "./package.json" assert { type: 'json' };
 import { program } from "commander";
 import createAction from "./lib/create.js";
+import fs from "fs-extra";
+
+const pkg = await fs.readJsonSync("./package.json");
 
 program
   .version(pkg.version)
