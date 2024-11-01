@@ -25,6 +25,6 @@ export const storage = new Storage({
   storageBackend: AsyncStorage,
 });
 
-export const website_name = 'react-native-tailwindcss';
+export const website_name = 'myApp';
 
 export const API_BASE_URL = 'http://localhost:9999';

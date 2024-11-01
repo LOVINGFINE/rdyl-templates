@@ -1,7 +1,7 @@
 import zhCN from "@/locales/zh-CN.json";
 import enUS from "@/locales/en-US.json";
 
-export const i18nConfig = {
+export const i18nConfig:I18nConfig = {
   initialLang: "zh-CN",
   locales: {
     "zh-CN": {

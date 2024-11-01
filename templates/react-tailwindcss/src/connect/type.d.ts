@@ -1,8 +1,8 @@
 /** @i18n */
-type I18nCOnfig = {
-  locales?: Record<string, I18nLangEntry>;
-  initialLang?: string;
-};
+interface I18nConfig {
+  locales: Record<string, I18nLangEntry>;
+  initialLang: string;
+}
 
 type TRValue = string | number | boolean;
 
@@ -72,7 +72,6 @@ interface QueryParam {
 }
 
 interface RouterConnectProps {
-  routes?: RouteOption[];
   afterEach?(e: RouteOption): void;
 }
 

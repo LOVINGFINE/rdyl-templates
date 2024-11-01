@@ -6,6 +6,7 @@ import {
   useCallback,
   useEffect,
   useState,
+  PropsWithChildren,
 } from "react";
 import { i18nConfig } from "@/App.config";
 
@@ -15,7 +16,7 @@ const { locales, initialLang } = i18nConfig;
 const I18nConnect: FC<PropsWithChildren> = props => {
   const { children } = props;
 
-  const [lang, setLang] = useState<string>(LangToken.get() || initialLang);
+  const [lang, setLang] = useState<string>(LangToken.get(initialLang));
 
   const entry = useMemo(() => {
     return (
@@ -68,11 +69,19 @@ function ParserI18nFn(data: Record<string, string | number | boolean>) {
 /** @当前语种 */
 export const LangToken = {
   name: btoa("Lang-Token").toUpperCase(),
-  get() {
-    return atob(localStorage.getItem(this.name) || "");
+  value: "",
+  get(t = "") {
+    const temp = localStorage.getItem(this.name);
+    let lang = t;
+    if (temp) {
+      lang = atob(temp);
+    }
+    LangToken.value = lang;
+    return lang;
   },
-  set(k: string) {
-    localStorage.setItem(this.name, btoa(k).toUpperCase());
+  set(d: string) {
+    LangToken.value = d;
+    localStorage.setItem(this.name, btoa(d).toUpperCase());
   },
   remove() {
     localStorage.removeItem(this.name);

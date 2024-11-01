@@ -18,11 +18,12 @@ import {
 import { useSearchParams } from "react-router-dom";
 import { resolve, match, toURL, toRouteMaps } from "@/utils/path";
 import { website_name } from "@/App.config";
+import { routes } from "@/App.router";
 
 const RouterCtx = createContext<RouterConnectValue>({} as RouterConnectValue);
 
-const RouterConnect: FC<RouterConnectProps> = ({ routes = [], afterEach }) => {
-  const _routes_map = useMemo(() => toRouteMaps(routes), [routes.length]);
+const RouterConnect: FC<RouterConnectProps> = ({ afterEach }) => {
+  const _routes_map = useMemo(() => toRouteMaps(routes), []);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -62,7 +63,7 @@ const RouterConnect: FC<RouterConnectProps> = ({ routes = [], afterEach }) => {
     const { params = {}, query = {} } = opts;
     const c = _routes_map[name];
     console.log(c);
-    
+
     if (c) {
       navigate(toURL(c.path, { params, query }), { replace });
     } else {
@@ -93,6 +94,12 @@ const RouterConnect: FC<RouterConnectProps> = ({ routes = [], afterEach }) => {
         redirect(r);
       }
     } else {
+      const { meta = {} } = route;
+      if (meta?.title) {
+        document.title = `${website_name} · ${meta?.title}`;
+      } else {
+        document.title = website_name;
+      }
       afterEach && afterEach(route);
     }
   }
