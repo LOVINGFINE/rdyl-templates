@@ -1,0 +1,12 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules"
+  ],
+  "ext": "js json ts tsx jsx",
+  "exec": "ts-node -r tsconfig-paths/register --files ./src/index.ts",
+  "watch": [
+    "src"
+  ],
+  "legacy-watch": false
+}

@@ -1,0 +1,25 @@
+targets:
+  $default:
+    builders:
+      dart_shelf|controller_builder:
+        enabled: true
+        generate_for:
+          include: ["lib/controllers/**.dart"]
+      dart_shelf|app_controller_builder:
+        enabled: true
+        generate_for:
+          include: ["lib/App.dart"]
+builders:
+  controller_builder:
+    import: "package:dart_shelf/middleware/controller/main.dart"
+    builder_factories: ["controllerBuilder"]
+    build_extensions: { ".dart": [".controller.dart"] }
+    auto_apply: root_package
+    build_to: source
+    runs_before: ["dart_shelf|app_controller_builder"]
+  app_controller_builder:
+    import: "package:dart_shelf/middleware/controller/main.dart"
+    builder_factories: ["appControllerBuilder"]
+    build_extensions: { ".dart": [".router.g.dart"] }
+    auto_apply: root_package
+    build_to: source

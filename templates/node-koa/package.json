@@ -1,0 +1,36 @@
+{
+  "name": "assist-iq-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "ts-node -r tsconfig-paths/register --files ./__test__/index.ts",
+    "build": "tsc & pkg "
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "koa": "^2.15.3",
+    "koa-body": "^6.0.1",
+    "koa-jwt": "^4.0.4",
+    "koa-router": "^13.0.1",
+    "koa-static": "^5.0.0",
+    "mongodb": "^6.9.0",
+    "mysql": "^2.18.1",
+    "ora": "^8.1.0",
+    "pinyin": "^4.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa-router": "^7.4.8",
+    "@types/koa-static": "^4.0.4",
+    "@types/lodash": "^4.17.9",
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^22.7.4",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.7",
+    "pkg": "^5.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

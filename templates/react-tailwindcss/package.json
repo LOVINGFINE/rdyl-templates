@@ -1,0 +1,45 @@
+{
+  "name": "react-tailwindcss",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "lint": "tsc && eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 20",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "axios": "^1.7.7",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.194",
+    "@types/node": "^20.4.0",
+    "@types/postcss-less": "^4.0.2",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-grid-layout": "^1.3.2",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "autoprefixer": "^10.4.14",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "vite-plugin-svgr": "^4.2.0",
+    "eslint": "^8.38.0",
+    "less": "^4.1.3",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "^6.11.1",
+    "react-router-dom": "6.11.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.3.3",
+    "vite": "^4.3.5"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+    ],
+    "baseUrl": ".",
+    "allowJs": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "noImplicitThis": false,
+    // "skipLibCheck": true,
+    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+  },
+  "include": [
+    "src",
+    "__test__",
+    "../types",
+    "env.d.ts",
+  ]
+}

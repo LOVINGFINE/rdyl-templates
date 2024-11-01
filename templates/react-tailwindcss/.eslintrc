@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "import/no-named-default": "off",
+    "import/no-named-as-default": "off",
+    "ts-expect-error": "off",
+    "no-extra-boolean-cast": "off",
+    "no-var": "off",
+    "no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
+  }
+}

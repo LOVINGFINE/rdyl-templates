@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { program } from "commander";
-import createAction from "./lib/create.js";
+import createAction from "./bin/create.js";
 import fs from "fs-extra";
 
 const pkg = await fs.readJsonSync("./package.json");
